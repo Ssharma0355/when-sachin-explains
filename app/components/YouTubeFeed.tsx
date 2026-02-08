@@ -1,27 +1,72 @@
-import Image from 'next/image';
-import { Play } from 'lucide-react';
+import Image, { StaticImageData } from 'next/image';
+import { Play, ArrowRight } from 'lucide-react';
+// Ensure the filename matches your actual file. 
+// If your file is named "thubnail1.png", keep it, otherwise rename to "thumbnail1.png"
+import Thumbnail1 from '../assets/thubnail1.png'; 
 
-// Mock Data - Replace with actual YouTube Data API fetch
-const videos = [
-  { id: 1, title: 'Mastering Next.js 14 in 10 Minutes', thumbnail: '/api/placeholder/600/338', views: '12K', link: '#' },
-  { id: 2, title: 'The Truth About Frontend Interviews', thumbnail: '/api/placeholder/600/338', views: '8.5K', link: '#' },
-  { id: 3, title: 'My Desk Setup 2026', thumbnail: '/api/placeholder/600/338', views: '20K', link: '#' },
+interface Video {
+  id: number;
+  title: string;
+  thumbnail: StaticImageData | string; // Allows both imported images and URL strings
+  views: string;
+  link: string;
+  category: string;
+}
+
+const videos: Video[] = [
+  { 
+    id: 1, 
+    title: 'Toxic Work Culture in India: Why Falling Apart', 
+    thumbnail: Thumbnail1, // ✅ CORRECT: Uses the imported object, not a string
+    views: '12K', 
+    link: 'https://youtu.be/-5QLU94yED0?si=ml2OsmNW5zUeXlZk',
+    category: 'Social Awareness'
+  },
+  { 
+    id: 2, 
+    title: 'The Truth About Frontend Interviews', 
+    thumbnail: '/api/placeholder/600/338', 
+    views: '8.5K', 
+    link: '#',
+    category: 'Career'
+  },
+  { 
+    id: 3, 
+    title: 'My Desk Setup 2026', 
+    thumbnail: '/api/placeholder/600/338', 
+    views: '20K', 
+    link: '#',
+    category: 'Tech & Gear'
+  },
 ];
 
 export default function YouTubeFeed() {
   return (
-    <section id="youtube" className="py-20 bg-slate-50">
+    <section id="youtube" className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900">Latest on YouTube</h2>
-            <p className="text-slate-600 mt-2">Social issues, Technology, Geo-Politics, Awareness</p>
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+              Latest on YouTube
+            </h2>
+            <p className="text-slate-600 mt-3 text-lg">
+              Deep dives into Social Issues, Technology, and Geo-Politics.
+            </p>
           </div>
-          <a href="https://youtube.com/@whensachinexplains?si=kMJ_YokwGKxwaY52" target="_blank" className="text-blue-600 font-medium hover:underline hidden sm:block">
-            View Channel &rarr;
+          <a 
+            href="https://youtube.com/@whensachinexplains?si=kMJ_YokwGKxwaY52" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+          >
+            Visit Channel 
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
 
+        {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((video) => (
             <a 
@@ -29,29 +74,46 @@ export default function YouTubeFeed() {
               href={video.link} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group block"
+              className="group flex flex-col h-full"
             >
-              <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg bg-slate-200">
-                {/* Use Next/Image for optimization */}
+              {/* Thumbnail Container */}
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 bg-slate-200">
                 <Image 
                   src={video.thumbnail} 
                   alt={video.title} 
                   fill 
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <div className="bg-red-600 text-white p-3 rounded-full shadow-xl transform scale-75 group-hover:scale-100 transition-all">
-                    <Play fill="currentColor" size={24} />
+                
+                {/* Overlay Play Button */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                  <div className="bg-red-600 text-white p-4 rounded-full shadow-lg transform scale-90 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300">
+                    <Play fill="currentColor" className="w-6 h-6 ml-1" />
                   </div>
                 </div>
+
+                {/* Category Badge */}
+                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-xs font-medium px-2.5 py-1 rounded-full">
+                  {video.category}
+                </div>
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-                {video.title}
-              </h3>
-              <p className="text-sm text-slate-500 mt-1">{video.views} views</p>
+
+              {/* Video Info */}
+              <div className="mt-5 flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
+                  {video.title}
+                </h3>
+                <div className="flex items-center gap-2 mt-2 text-sm text-slate-500 font-medium">
+                  <span>{video.views} views</span>
+                  <span>•</span>
+                  <span className="text-red-600">Watch now</span>
+                </div>
+              </div>
             </a>
           ))}
         </div>
+
       </div>
     </section>
   );
