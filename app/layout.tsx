@@ -6,13 +6,20 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'When Sachin Explains | Tech, Tutorials & Insights',
-  description: 'Official portfolio of When Sachin Explains. Explore the latest YouTube tutorials, Instagram updates, and in-depth tech blogs.',
+  description:
+    'Official portfolio of When Sachin Explains. Explore the latest YouTube tutorials, Instagram updates, and in-depth tech blogs.',
   openGraph: {
     title: 'When Sachin Explains',
     description: 'Simplifying complex topics.',
-    images: ['/og-image.jpg'], // Add a brand banner here
+    images: ['/og-image.jpg'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 };
+
 
 export default function RootLayout({
   children,
