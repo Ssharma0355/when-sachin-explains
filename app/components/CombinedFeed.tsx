@@ -1,4 +1,6 @@
+"use client"
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const instaPosts = [
   { id: 1, img: '/api/placeholder/400/400', caption: 'Coding late night 🌙' },
@@ -13,7 +15,9 @@ const blogs = [
   { id: 3, title: 'Content Creation vs Coding', date: 'Jan 10, 2026', category: 'Lifestyle' },
 ];
 
+
 export default function CombinedFeed() {
+
   return (
     <section id="instagram" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -36,9 +40,12 @@ export default function CombinedFeed() {
               ))}
             </div>
             <div className="mt-6 text-center md:text-left">
-              <button className="text-sm font-semibold text-slate-900 border-b-2 border-slate-900 pb-0.5 hover:text-blue-600 hover:border-blue-600 transition-colors">
+                <Link href="https://www.instagram.com/whensachinexplains/">
+                <button  className="text-sm font-semibold text-slate-900 border-b-2 border-slate-900 pb-0.5 hover:text-blue-600 hover:border-blue-600 transition-colors">
                 Follow on Instagram
               </button>
+                </Link>
+            
             </div>
           </div>
 
