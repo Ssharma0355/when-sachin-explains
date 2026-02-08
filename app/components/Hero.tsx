@@ -1,44 +1,52 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowRight, Youtube, Instagram } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center bg-white overflow-hidden">
-      {/* Background Gradient Blob */}
-      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-blue-100 rounded-full blur-3xl opacity-50" />
+    <section className="relative min-h-[75vh] flex items-center bg-[#f8fafc] overflow-hidden">
       
-      <div className="container mx-auto px-6 relative z-10 text-center">
+      {/* Ambient Gradient */}
+      <div className="absolute -top-32 right-[-10%] w-[600px] h-[600px] bg-blue-200/40 rounded-full blur-[120px]" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="max-w-4xl"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-4 border border-blue-100">
-            Content Creator & Developer
+          <span className="inline-block mb-6 text-xs tracking-widest uppercase text-blue-600 font-semibold">
+            Developer • Educator • Social Commentary
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6">
-            When <span className="text-blue-600">Sachin</span> Explains
+
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-slate-900 leading-[1.05]">
+            When <span className="text-blue-600">Sachin</span> Explains,
+            <br />
+            <span className="text-slate-700 font-normal">
+              complexity disappears.
+            </span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-            Breaking down complex tech concepts, one video at a time. 
-            Join the community on YouTube and Instagram.
+
+          <p className="mt-8 text-lg md:text-xl text-slate-600 max-w-2xl">
+            Thoughtful breakdowns of technology, work culture, and systems
+            shaping modern India.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#youtube" 
-              className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+
+          <div className="mt-12 flex items-center gap-8">
+            <a
+              href="#youtube"
+              className="group inline-flex items-center gap-2 text-slate-900 font-semibold border-b border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition"
             >
-              <Youtube size={20} />
-              Watch Latest
+              Watch on YouTube
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a 
-              href="#instagram" 
-              className="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+
+            <a
+              href="#instagram"
+              className="text-slate-500 font-medium hover:text-slate-900 transition"
             >
-              <Instagram size={20} />
-              Follow Behind the Scenes
+              Behind the scenes
             </a>
           </div>
         </motion.div>
