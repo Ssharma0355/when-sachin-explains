@@ -29,18 +29,21 @@ const videos: Video[] = [
     },
     {
         id: 2,
+        title: 'Why Indians are Eating Slow Poison? (The Hidden Truth)',
+        thumbnail: Thumbnail3,
+        category: 'Social Commentary',
+        views: '34K',
+        link: 'https://youtu.be/4W8LyeQryH8?si=T5Aaxy7RdDGHpNUN',
+        status: 'published',
+    },
+    {
+        id: 3,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
         status: 'upcoming',
     },
-    {
-        id: 3,
-        title: 'Why India Loves to Consume Slow Poison',
-        thumbnail: Thumbnail3,
-        category: 'Social Commentary',
-        status: 'upcoming',
-    },
+
 ];
 
 
