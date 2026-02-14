@@ -42,7 +42,7 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex items-center gap-8">
               <a
-                href="#"
+                href="#youtube" // Changed to ID for smooth scroll
                 className="group inline-flex items-center gap-2 text-slate-900 font-semibold border-b border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition"
               >
                 Watch on YouTube
@@ -64,19 +64,17 @@ export default function Hero() {
             {/* Phone Container */}
             <div className="relative w-[320px] h-[640px] bg-black rounded-[35px] overflow-hidden shadow-2xl border-[6px] border-white ring-1 ring-slate-900/5 rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               
-              {/* GIF PLAYER (Using simple img tag) */}
+              {/* GIF PLAYER */}
               <img 
                 src="/videos/reels.gif" 
                 alt="Sachin Explains Reel"
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
-              {/* Overlay Gradient (for text readability) */}
+              {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80 pointer-events-none" />
 
               {/* --- REELS UI LAYERS --- */}
-
-              {/* Right Sidebar: Actions */}
               <div className="absolute bottom-20 right-3 flex flex-col items-center gap-6 z-20">
                 <div className="flex flex-col items-center gap-1 group cursor-pointer">
                   <div className="p-2 transition group-hover:scale-110">
@@ -104,10 +102,8 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Bottom Left: User Info */}
+              {/* User Info */}
               <div className="absolute bottom-6 left-4 right-16 z-20 text-white">
-                
-                {/* User Row */}
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-[2px]">
                     <div className="w-full h-full rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold">
@@ -119,15 +115,11 @@ export default function Hero() {
                     Follow
                   </button>
                 </div>
-
-                {/* Caption */}
                 <div className="mb-3">
                   <p className="text-sm line-clamp-2 leading-tight drop-shadow-md text-white/95">
                     Why we indians love comsune Poison... <span className="text-white/60 cursor-pointer">more</span>
                   </p>
                 </div>
-
-                {/* Audio Track */}
                 <div className="flex items-center gap-2 opacity-90">
                   <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md px-2 py-1 rounded-full">
                     <Music2 size={10} />
@@ -137,10 +129,8 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
