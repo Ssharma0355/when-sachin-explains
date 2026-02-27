@@ -8,6 +8,8 @@ import { motion, Variants } from 'framer-motion'; // Added Variants import
 import Thumbnail1 from '../assets/thubnail1.png';
 import Thumbnail2 from "../assets/thubnail2.png";
 import Thumbnail3 from "../assets/thubnail3.png";
+import Thumbnail4 from "../assets/thubnail4.png";
+
 
 interface Video {
     id: number;
@@ -38,8 +40,17 @@ const videos: Video[] = [
         link: 'https://youtu.be/4W8LyeQryH8?si=T5Aaxy7RdDGHpNUN',
         status: 'published',
     },
-    {
+     {
         id: 3,
+        title: 'AI Summit 2026 Exposed: India’s Biggest Innovation Failure? | Chaos, Scandal & Hidden Heroes',
+        thumbnail: Thumbnail4,
+        category: 'Social Awareness',
+        views: '1K',
+        link: 'https://youtu.be/jw2qAE5wHbY?si=DbV1-OaX1JAbeDYK',
+        status: 'published',
+    },
+    {
+        id: 4,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
