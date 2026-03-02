@@ -9,6 +9,8 @@ import Thumbnail1 from '../assets/thubnail1.png';
 import Thumbnail2 from "../assets/thubnail2.png";
 import Thumbnail3 from "../assets/thubnail3.png";
 import Thumbnail4 from "../assets/thubnail4.png";
+import Thumbnail5 from "../assets/thubnail5.png";
+
 
 
 interface Video {
@@ -49,8 +51,17 @@ const videos: Video[] = [
         link: 'https://youtu.be/jw2qAE5wHbY?si=DbV1-OaX1JAbeDYK',
         status: 'published',
     },
-    {
+     {
         id: 4,
+        title: 'US–Israel vs Iran Tensions 2026: Oil Crisis, War Risk & India Impact Explained',
+        thumbnail: Thumbnail5,
+        category: 'Social Awareness',
+        views: '1K',
+        link: 'https://youtu.be/6lQo-bOv_bA?si=WXo-4xCkM6ZSHxUk',
+        status: 'published',
+    },
+    {
+        id: 5,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
