@@ -10,6 +10,8 @@ import Thumbnail2 from "../assets/thubnail2.png";
 import Thumbnail3 from "../assets/thubnail3.png";
 import Thumbnail4 from "../assets/thubnail4.png";
 import Thumbnail5 from "../assets/thubnail5.png";
+import Thumbnail6 from "../assets/thubnail6.png";
+
 
 
 
@@ -62,6 +64,15 @@ const videos: Video[] = [
     },
     {
         id: 5,
+        title: 'The Truth About Religious Extremism: How It Fuels Terrorism and Global Conflicts',
+        thumbnail: Thumbnail6,
+        category: 'Social Awareness',
+        views: '12',
+        link: 'https://youtu.be/Agbs_dTQ1Mo?si=Hrykg-CNwRrG3_BU',
+        status: 'published',
+    },
+    {
+        id: 6,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
