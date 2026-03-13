@@ -4,6 +4,8 @@ import CombinedFeed from './components/CombinedFeed';
 import Footer from './components/Footer';
 import YoutubeLaptopMockup from './components/YoutubeLaptopMockup';
 import YoutubePhoneMockup from './components/YoutubePhoneMockup';
+import XPostsCarousel from './components/XPostsFeed';
+import XPostsFeed from './components/XPostsFeed';
 
 export default function Home() {
   return (
@@ -30,8 +32,9 @@ export default function Home() {
 
         </div>
       </section>
-
+       
       <YouTubeFeed />
+      <XPostsFeed />
       <CombinedFeed />
       <Footer />
 
