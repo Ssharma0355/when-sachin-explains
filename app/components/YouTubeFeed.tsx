@@ -11,6 +11,8 @@ import Thumbnail3 from "../assets/thubnail3.png";
 import Thumbnail4 from "../assets/thubnail4.png";
 import Thumbnail5 from "../assets/thubnail5.png";
 import Thumbnail6 from "../assets/thubnail6.png";
+import Thumbnail7 from "../assets/thubnail7.png";
+
 
 
 
@@ -73,6 +75,15 @@ const videos: Video[] = [
     },
     {
         id: 6,
+        title: 'UPSC Dream vs Reality | The Truth Every Aspirant Should Know',
+        thumbnail: Thumbnail7,
+        category: 'Education & Carrier',
+        views: '242',
+        link: 'https://youtu.be/DHh0HJUyKCQ?si=ffBD1VtMUGYKpdiX',
+        status: 'published',
+    },
+    {
+        id: 7,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
