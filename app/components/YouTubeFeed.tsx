@@ -12,10 +12,7 @@ import Thumbnail4 from "../assets/thubnail4.png";
 import Thumbnail5 from "../assets/thubnail5.png";
 import Thumbnail6 from "../assets/thubnail6.png";
 import Thumbnail7 from "../assets/thubnail7.png";
-
-
-
-
+import Thumbnail8 from "../assets/thubnail8.png";
 
 interface Video {
     id: number;
@@ -84,6 +81,15 @@ const videos: Video[] = [
     },
     {
         id: 7,
+        title: 'Is India Fighting a Secret War? (Explained)',
+        thumbnail: Thumbnail8,
+        category: 'Indian Politics & War',
+        views: '107',
+        link: 'https://youtu.be/YaIG1NVxHQA?si=P4ylrwYrUzOOcDPW',
+        status: 'published',
+    },
+    {
+        id: 8,
         title: 'The Fall of State Bihar',
         thumbnail: Thumbnail2,
         category: 'Society',
