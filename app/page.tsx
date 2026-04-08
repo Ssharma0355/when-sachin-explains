@@ -20,7 +20,7 @@ export default function Home() {
         <div className="absolute left-[-10%] top-20 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-[120px]" />
         <div className="absolute right-[-10%] bottom-10 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[120px]" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-8 relative z-10">
 
           <div className="grid lg:grid-cols-2 gap-16 items-center justify-items-center">
 

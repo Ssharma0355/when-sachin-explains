@@ -13,6 +13,8 @@ import Thumbnail5 from "../assets/thubnail5.png";
 import Thumbnail6 from "../assets/thubnail6.png";
 import Thumbnail7 from "../assets/thubnail7.png";
 import Thumbnail8 from "../assets/thubnail8.png";
+import Thumbnail9 from "../assets/thubnail9.png";
+
 
 interface Video {
     id: number;
@@ -86,6 +88,15 @@ const videos: Video[] = [
         category: 'Indian Politics & War',
         views: '107',
         link: 'https://youtu.be/YaIG1NVxHQA?si=P4ylrwYrUzOOcDPW',
+        status: 'published',
+    },
+    {
+        id: 9,
+        title: 'Naxalism Kese Shuru Hua? | The Untold Story of India’s Red Corridor',
+        thumbnail: Thumbnail9,
+        category: 'Indian Politics & Naxalism',
+        views: '107',
+        link: 'https://youtu.be/oIWsMMrvZGI?si=eq8NLEoqrfy-663g',
         status: 'published',
     },
     {
