@@ -6,6 +6,8 @@ import YoutubeLaptopMockup from './components/YoutubeLaptopMockup';
 import YoutubePhoneMockup from './components/YoutubePhoneMockup';
 import XPostsCarousel from './components/XPostsFeed';
 import XPostsFeed from './components/XPostsFeed';
+import InstantNews from './components/InstantNews';
+import NewsCTA from './components/NewsCTA';
 
 export default function Home() {
   return (
@@ -32,7 +34,7 @@ export default function Home() {
 
         </div>
       </section>
-       
+      <NewsCTA />
       <YouTubeFeed />
       <XPostsFeed />
       <CombinedFeed />
