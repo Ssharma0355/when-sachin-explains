@@ -14,6 +14,8 @@ import Thumbnail6 from "../assets/thubnail6.png";
 import Thumbnail7 from "../assets/thubnail7.png";
 import Thumbnail8 from "../assets/thubnail8.png";
 import Thumbnail9 from "../assets/thubnail9.png";
+import Thumbnail10 from "../assets/thubnail10.png";
+
 
 
 interface Video {
@@ -97,6 +99,15 @@ const videos: Video[] = [
         category: 'Indian Politics & Naxalism',
         views: '107',
         link: 'https://youtu.be/oIWsMMrvZGI?si=eq8NLEoqrfy-663g',
+        status: 'published',
+    },
+    {
+        id: 10,
+        title: 'PFBR Explained: How India Built a Reactor That Creates Its Own Fuel        ',
+        thumbnail: Thumbnail10,
+        category: 'Science & Technology',
+        views: '70',
+        link: 'https://youtu.be/BtclvAzseno?si=CKlqeppvs119RA4k',
         status: 'published',
     },
     {
