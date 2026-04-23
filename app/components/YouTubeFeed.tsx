@@ -15,6 +15,8 @@ import Thumbnail7 from "../assets/thubnail7.png";
 import Thumbnail8 from "../assets/thubnail8.png";
 import Thumbnail9 from "../assets/thubnail9.png";
 import Thumbnail10 from "../assets/thubnail10.png";
+import Thumbnail11 from "../assets/thubnail11.png";
+
 
 
 
@@ -107,6 +109,15 @@ const videos: Video[] = [
         thumbnail: Thumbnail10,
         category: 'Science & Technology',
         views: '70',
+        link: 'https://youtu.be/BtclvAzseno?si=CKlqeppvs119RA4k',
+        status: 'published',
+    },
+    {
+        id: 11,
+        title: 'Khan Sir: Fraud or Revolution? | The Untold Biography',
+        thumbnail: Thumbnail11,
+        category: 'Biography',
+        views: '',
         link: 'https://youtu.be/BtclvAzseno?si=CKlqeppvs119RA4k',
         status: 'published',
     },
